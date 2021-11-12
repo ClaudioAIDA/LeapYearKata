@@ -21,6 +21,14 @@ namespace LeapYearKata
             Assert.Equal(expectedValue, result);
         }
 
+        [Fact]
+        public void Year2008IsLeapYear()
+        {
+            bool expectedValue = true;
+            var result = LeapYear.IsLeapYear(2008);
+            Assert.Equal(expectedValue, result);
+        }
+
         [Theory]
         [InlineData(2001)]
         [InlineData(2002)]
@@ -42,6 +50,7 @@ namespace LeapYearKata
         {
             if (year == 2000) return true;
             if (year == 2004) return true;
+            if (year == 2008) return true;
             return false;
         }
     }

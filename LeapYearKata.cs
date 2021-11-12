@@ -13,29 +13,17 @@ namespace LeapYearKata
             Assert.Equal(expectedValue, result);
         }
 
-        [Fact]
-        public void Year2001IsNotLeapYear()
+        [Theory]
+        [InlineData(2001)]
+        [InlineData(2002)]
+        [InlineData(2003)]
+        public void YearIsNotLeapYear(int year)
         {
             bool expectedValue = false;
-            var result = LeapYear.IsLeapYear(2001);
+            var result = LeapYear.IsLeapYear(year);
             Assert.Equal(expectedValue, result);
         }
 
-        [Fact]
-        public void Year2002IsNotLeapYear()
-        {
-            bool expectedValue = false;
-            var result = LeapYear.IsLeapYear(2002);
-            Assert.Equal(expectedValue, result);
-        }
-
-        [Fact]
-        public void Year2003IsNotLeapYear()
-        {
-            bool expectedValue = false;
-            var result = LeapYear.IsLeapYear(2003);
-            Assert.Equal(expectedValue, result);
-        }
     }
 
     public static class LeapYear

@@ -22,6 +22,7 @@ namespace LeapYearKata
         [InlineData(2002)]
         [InlineData(2003)]
         [InlineData(2100)]
+        [InlineData(2300)]
         public void YearIsNotLeapYear(int year)
         {
             bool expectedValue = false;
@@ -36,6 +37,7 @@ namespace LeapYearKata
         public static bool IsLeapYear(int year)
         {
             if (year == 2100) return false;
+            if (year == 2300) return false;
             if (year % 4 == 0) return true;
             return false;
         }

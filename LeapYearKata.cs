@@ -5,27 +5,15 @@ namespace LeapYearKata
 {
     public class LeapYearKataTest
     {
-        [Fact]
-        public void Year2000IsLeapYear()
-        {
-            bool expectedValue = true;
-            var result = LeapYear.IsLeapYear(2000);
-            Assert.Equal(expectedValue, result);
-        }
 
-        [Fact]
-        public void Year2004IsLeapYear()
+        [Theory]
+        [InlineData(2000)]
+        [InlineData(2004)]
+        [InlineData(2008)]
+        public void YearIsLeapYear(int year)
         {
             bool expectedValue = true;
-            var result = LeapYear.IsLeapYear(2004);
-            Assert.Equal(expectedValue, result);
-        }
-
-        [Fact]
-        public void Year2008IsLeapYear()
-        {
-            bool expectedValue = true;
-            var result = LeapYear.IsLeapYear(2008);
+            var result = LeapYear.IsLeapYear(year);
             Assert.Equal(expectedValue, result);
         }
 
@@ -40,8 +28,6 @@ namespace LeapYearKata
             var result = LeapYear.IsLeapYear(year);
             Assert.Equal(expectedValue, result);
         }
-
-
 
     }
 

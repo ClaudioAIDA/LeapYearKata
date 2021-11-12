@@ -37,9 +37,7 @@ namespace LeapYearKata
     {
         public static bool IsLeapYear(int year)
         {
-            if (year == 2100) return false;
-            if (year == 2300) return false;
-            if (year == 2500) return false;
+            if (year % 100 == 0) return false;
             if (year % 4 == 0) return true;
             return false;
         }

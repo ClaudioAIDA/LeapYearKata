@@ -28,6 +28,14 @@ namespace LeapYearKata
             var result = LeapYear.IsLeapYear(2002);
             Assert.Equal(expectedValue, result);
         }
+
+        [Fact]
+        public void Year2003IsNotLeapYear()
+        {
+            bool expectedValue = false;
+            var result = LeapYear.IsLeapYear(2003);
+            Assert.Equal(expectedValue, result);
+        }
     }
 
     public static class LeapYear
